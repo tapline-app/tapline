@@ -134,6 +134,20 @@ dist
 !.yarn/sdks
 !.yarn/versions
 
+# Python (ADD THESE)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+*.so
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
