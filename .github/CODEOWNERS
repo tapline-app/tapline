@@ -1,0 +1,32 @@
+# CODEOWNERS - Auto-assign reviewers for PRs
+
+# Default owners for everything
+* @saklain-mustaque
+
+# Node.js Services
+/apps/api-gateway/ @saklain-mustaque
+/apps/chat-service/ @tm-username
+/apps/meet-service/ @saklain-mustaque
+/apps/auth-service/ @saklain-mustaque @tm-username
+/apps/notification-service/ @saklain-mustaque @tm-username
+/apps/file-storage-service/ @saklain-mustaque @tm-username
+
+# Python Services
+/python/mail-service/ @asim-username
+/python/calendar-service/ @asim-username
+/python/ai-service/ @asim-username
+
+# Frontend
+/web/ @saklain-mustaque
+
+# Shared Packages
+/packages/ @saklain-mustaque @tm-username @asim-username
+/python-shared/ @asim-username
+
+# Infrastructure
+/infrastructure/ @saklain-mustaque
+/.github/ @saklain-mustaque
+
+# Documentation
+/docs/ @saklain-mustaque @tm-username @asim-username
+README.md @saklain-mustaque

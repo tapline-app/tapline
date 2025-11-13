@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run lint-staged for JS/TS files
+npx lint-staged
+
+# Run Black formatter for Python files (only if python directory exists and has files)
+if [ -d "python" ] && [ "$(ls -A python 2>/dev/null)" ]; then
+  echo "Checking Python files with Black..."
+  cd python && poetry run black . --check || {
+    echo "❌ Python formatting check failed. Run 'cd python && poetry run black .' to fix."
+    exit 1
+  }
+  cd ..
+else
+  echo "⚠️  No Python files to check (python directory is empty or doesn't exist)"
+fi
+
+echo "✅ Pre-commit checks passed!"

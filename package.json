@@ -1,0 +1,44 @@
+{
+  "name": "tapline",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Enterprise Communication & Collaboration Platform",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "web/*"
+  ],
+  "scripts": {
+    "dev": "pnpm run --parallel dev",
+    "build": "pnpm run --recursive build",
+    "test": "pnpm run --recursive test",
+    "lint": "pnpm run --recursive lint",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.0",
+    "@commitlint/config-conventional": "^18.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "lint-staged": {
+    "apps/**/*.{js,ts,tsx}": [
+      "prettier --write"
+    ],
+    "packages/**/*.{js,ts,tsx}": [
+      "prettier --write"
+    ],
+    "web/**/*.{js,ts,tsx}": [
+      "prettier --write"
+    ],
+    "**/*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
