@@ -38,7 +38,7 @@ module.exports = {
         'deps'          // Dependencies
       ]
     ],
-    'subject-case': [2, 'always', 'sentence-case'],
+    'subject-case': [0],
     'header-max-length': [2, 'always', 100]
   }
 };
